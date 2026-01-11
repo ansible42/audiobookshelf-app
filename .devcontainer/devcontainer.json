@@ -1,0 +1,28 @@
+{
+  "name": "Audiobookshelf Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "msjsdiag.debugger-for-chrome",
+        "octref.vetur"
+      ]
+    }
+  },
+  "containerEnv": {
+    "ANDROID_SDK_ROOT": "/opt/android/sdk",
+    "JAVA_HOME": "/usr/lib/jvm/java-11-openjdk-amd64"
+  },
+  "forwardPorts": [3000, 8080, 8100],
+  "mounts": [
+    "source=${localWorkspaceFolder}/android,target=/workspace/android,type=bind,consistency=cached"
+  ],
+  "runArgs": ["--init"],
+  "postCreateCommand": "npm install",
+  "remoteUser": "vscode"
+}

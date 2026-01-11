@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm: install",
+      "type": "shell",
+      "command": "npm install",
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate (nuxt)",
+      "type": "shell",
+      "command": "npm run generate",
+      "problemMatcher": []
+    },
+    {
+      "label": "Capacitor: sync",
+      "type": "shell",
+      "command": "npx cap sync",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Android (Android Studio)",
+      "type": "shell",
+      "command": "npx cap open android",
+      "problemMatcher": []
+    }
+  ]
+}
